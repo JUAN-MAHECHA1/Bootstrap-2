@@ -42,9 +42,11 @@ textarea,
 span {
     font-family: "Raleway", sans-serif;
 }
-body{
+
+body {
     overflow-x: hidden;
 }
+
 /* 5) desktop */
 header {
     width: 100%;
@@ -72,6 +74,14 @@ header nav .logo:hover {
     color: var(--white-color);
     transform: scale(1.2);
     transition: .5s;
+}
+
+.navbar-toggler {
+    border-color: white;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 #navbarNav li a {
@@ -417,7 +427,12 @@ header .bag-button .counter-products {
 
 #materials .cont-info {
     padding: 120px 60px 0 50px;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    align-items: center;
 }
+
 
 #materials .cont-info h3 {
     color: var(--primary-color);
@@ -459,41 +474,66 @@ header .bag-button .counter-products {
     margin-left: 15px;
 }
 
-#materials .cont-img .top{
+#materials .cont-img {
+    position: relative;
+    left: 80px;
+}
+
+#materials .cont-img .dos img {
+    border-radius: 20px;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#materials .cont-img .dos {
+    position: relative;
+    left: -30px;
+}
+
+#materials .cont-img .top {
     margin-bottom: 26px;
     box-shadow: -3px 12px 15px -10px #d7e5e7;
 }
-#materials .cont-img .bottom{
+
+#materials .cont-img .bottom {
     box-shadow: -3px 12px 15px -10px #c8bab8;
 }
 
 #materials .cont-img::before {
     content: "";
-    width: 495px;
-    height: 301px;
-    background: #f7f7f7;
+    width: 350px;
+    height: 450px;
+    background: #f4f4f4;
     position: absolute;
     z-index: -1;
-    top: 200px;
-    border-radius: 20px 0 0;
-    right: -200px;
+    top: 20px;
+    left: 406px;
+    border-radius: 30px 0 0 30px;
 }
 
-#materials .cont-img img .centro {
-    position: absolute;
-    bottom: -200px;
-    right: 0px;
+
+
+#materials .cont-img .centro {
+    position: relative;
+    bottom: -80px;
+    right: 0;
+    border-radius: 20px 0 0 20px;
+    display: block;
+    height: auto;
     box-shadow: -3px 16px 15px -10px #cb8139;
 }
 
+
 /* reviews */
-#reviews{
+#reviews {
     width: 100%;
     padding: 90px;
     text-align: center;
     position: relative;
 
 }
+
 #reviews h3 {
     color: var(--primary-color);
     text-transform: uppercase;
@@ -510,22 +550,25 @@ header .bag-button .counter-products {
     color: var(--dark-color);
     border: none;
 }
-#reviews .card-reviews{
+
+#reviews .card-reviews {
     position: relative;
 }
-#reviews .card-reviews .cont-info{
+
+#reviews .card-reviews .cont-info {
     background: var(--white-color);
     position: absolute;
-    width: 78%;
+    width: 81%;
     bottom: 90px;
     border-radius: 30px;
-    left: 7%;
+    left: 9%;
     padding-bottom: 40px;
-    padding-top: 50px;
+    padding-top: 40px;
     padding-right: 30px;
     padding-left: 30px;
 }
-#reviews .card-reviews .cont-info img{
+
+#reviews .card-reviews .cont-info img {
     position: absolute;
     top: -30px;
     margin: 0 auto;
@@ -534,17 +577,20 @@ header .bag-button .counter-products {
     border: 10px solid white;
     border-radius: 50%;
 }
-#reviews .card-reviews .cont-info h4{
+
+#reviews .card-reviews .cont-info h4 {
     font-size: var(--fs-title3);
     color: var(--dark-color);
 
 }
-#reviews .card-reviews .cont-info h5{
+
+#reviews .card-reviews .cont-info h5 {
     font-size: 12px;
     color: var(--dark-color);
     color: #666;
     font-weight: 300;
 }
+
 #reviews .card-reviews .stars i {
     color: #f6b76f;
     letter-spacing: 4px;
@@ -553,9 +599,11 @@ header .bag-button .counter-products {
 #reviews .card-reviews .stars {
     margin-bottom: 30px;
 }
-#reviews .card-reviews .stars i:nth-child(5){
+
+#reviews .card-reviews .stars i:nth-child(5) {
     opacity: 0.5;
 }
+
 #reviews .slick-arrow {
     background: var(--white-color);
     width: 50px;
@@ -566,14 +614,291 @@ header .bag-button .counter-products {
     border: 1px solid #dbdada;
 
 }
+
 #reviews .slick-arrow::before {
     color: #0d1b39;
 }
 
+#reviews .slick-slide {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    width: 100%;
+    padding: 80px;
+    background: rgb(243, 235, 235);
+    margin: 0;
+    bottom: 40px;
+}
+
+footer h2 {
+    padding-right: 80px;
+    font-size: var(--fs-title2);
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    border: none;
+}
+
+footer h3 {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: var(--fs-title4);
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: var(--fs-text);
+    color: var(--dark-color);
+    margin-top: 20px;
+}
+
+footer a {
+    color: black;
+    display: block;
+    padding: 6px;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.footer-bottom .copy {
+    color: #888;
+}
+
+.footer-bottom a {
+    color: #000;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #e77e23;
+}
 
 
-/* 6) table */
-@media screen and (min-width: 768px) and (max-width: 1080) {}
 
-/* 7) smartphone */
-@media screen and (min-width: 320px) and (max-width: 767px) {}
+/* 6.Responsive Tablet */
+@media screen and (min-width:768px) and (max-width:1080px) {
+
+    header {
+        height: 130vh;
+    }
+
+    #hero {
+        padding: 90px 70px;
+    }
+
+    #hero p {
+        padding: 40px 30px;
+    }
+
+    #experiences .cont-img img {
+        width: 100%;
+    }
+
+    #experiences .cont-info p,
+    .cont-info h2 {
+        max-width: 390px;
+    }
+
+    #materials .cont-info {
+        padding: 40px;
+    }
+
+    #materials .cont-info p {
+        max-width: 400px;
+    }
+
+    #materials .cont-img .centro img {
+        position: relative;
+        margin-left: 200px;
+        top: 120px;
+        right: 0;
+    }
+
+    #reviews .card-reviews {
+        margin: 0 15px;
+    }
+
+    footer {
+        padding: 0;
+    }
+
+    footer .bot {
+        position: relative;
+        left: 8px;
+    }
+
+    footer .copy {
+        position: relative;
+        left: 12px;
+    }
+
+}
+
+/* 7.Responsive Smartphone */
+@media screen and (min-width:320px) and (max-width:767px) {
+    header {
+        height: 76vh;
+    }
+
+    header .bag-button {
+        display: none;
+    }
+
+    header .pet {
+        padding: 0 60px 0 10px;
+    }
+
+    #hero {
+        padding: 2px 60px 0 2px;
+    }
+
+    #hero h2 {
+        font-size: 20px;
+    }
+
+    #hero p {
+        font-size: 16px;
+        padding: 40px 30px;
+    }
+
+    #hero form input {
+        position: relative;
+        width: 240px;
+        right: 20px;
+    }
+
+    #hero form button {
+        right: 27%;
+    }
+
+    #choosing-us {
+        text-align: center;
+        padding: 0px 60px 0 2px;
+    }
+
+    #choosing-us h3 {
+        padding-top: 15px;
+    }
+
+    #products h2 {
+        position: relative;
+        left: -30px;
+    }
+
+    #products ul {
+        position: relative;
+        width: 80%;
+        left: -20px;
+    }
+
+    #products .cont-img {
+        position: relative;
+        left: -8px;
+    }
+
+    #products .slick-arrow {
+        right: -8px;
+    }
+
+    #experiences {
+        padding: 80px 0;
+    }
+
+    #experiences .cont-img img {
+        width: 100%;
+    }
+
+    #experiences .cont-img::after {
+        bottom: 0;
+        left: -60px;
+    }
+
+    #experiences .cont-img::before {
+        top: -50px;
+    }
+
+    #experiences .cont-info {
+        padding: 70px 30px;
+    }
+
+
+    #experiences .cont-info p,
+    .cont-info h2 {
+        max-width: 390px;
+    }
+
+    #experiences .cont-info h2 {
+        font-size: 35px;
+    }
+
+    #materials {
+        padding: 0;
+    }
+
+    #materials .cont-info {
+        padding: 40px;
+    }
+
+    #materials .cont-info h2 {
+        font-size: 35px;
+        width: 100%;
+    }
+
+    #materials .cont-info p {
+        width: 100%;
+    }
+
+    #materials .cont-img .centro {
+        position: relative;
+        top: 20px;
+        right: 80px;
+    }
+
+    #materials .cont-img::before {
+         position: relative;
+        left: 40px;
+        width: 80px;
+        height: 50px;
+        top: 60px;
+
+    }
+    
+    #reviews {
+        width: 100%;
+        padding: 100px;
+    }
+
+    #reviews .card-reviews {
+        width: 100%;/
+    }
+
+    #reviews h2 {
+        font-size: 20px;
+    }
+
+    #reviews .slick-arrow {
+        right: -8px;
+        padding: 0;
+    }
+
+    footer {
+        padding: 80px 30px;
+    }
+
+    footer i {
+        margin-right: 5px;
+    }
+}
