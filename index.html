@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panto-shop</title>
+    <!-- aos library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Slick CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
@@ -28,22 +30,22 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">chair </a>
+                            <a class="nav-link" href="#index.html">Home </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Furniture</a>
+                            <a class="nav-link active" aria-current="page" href="#products">Features</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Shop</a>
+                            <a class="nav-link" href="#experiences">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About us</a>
+                            <a class="nav-link" href="#materials">About us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact </a>
+                            <a class="nav-link" href="#reviews">Testimonials</a>
                         </li>
 
                     </ul>
@@ -56,7 +58,7 @@
         </nav>
 
         <div id="hero">
-            <div id="carouselHeroSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div id="carouselHeroSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-aos="fade-down" data-aos-duration="2000">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <h2>Make Your Interior More Minimalistic & Modern</h2>
@@ -72,7 +74,7 @@
                     </div>
                 </div>
             </div>
-            <form action="#">
+            <form action="#" data-aos="fade-up" data-aos-duration="3000">
                 <input type="text" placeholder="search">
                 <button><i class="bi bi-search"></i></button>
             </form>
@@ -83,22 +85,22 @@
         <section id="choosing-us">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="2000">
                         <h2>Why <br> Choosing Us</h2>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000">
                         <h3>Luxury facilities</h3>
                         <p>The advantage of hiring a workspace with us is that givees you comfortable service and
                             all-around facilities.</p>
                         <a href="#">More info <i class="bi bi-arrow-right"></i></a>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6" data-aos="fade-down" data-aos-delay="600" data-aos-duration="1000">
                         <h3>Affordable Price</h3>
                         <p>You can get a workspace of the highst quality at an affordable price and still enjoy the
                             facilities that are oly here.</p>
                         <a href="#">More info <i class="bi bi-arrow-right"></i></a>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6" data-aos="fade-down" data-aos-delay="900" data-aos-duration="1000">
                         <h3>Many Choices</h3>
                         <p>We provide many unique work space choices so that you can choose the workspace to your
                             liking.</p>
@@ -773,7 +775,8 @@
                     <div class="col-md-6">
                         <h3>Materials</h3>
                         <h2>Very serious <br> materials for making <br> furniture</h2>
-                        <p>Because panto was very serious about designing furniture for our <br> environment, using a very
+                        <p>Because panto was very serious about designing furniture for our <br> environment, using a
+                            very
                             expensive and famous capital but at a <br> relatively low price</p>
                         <a href="#">More info <i class="bi bi-arrow-right"></i></a>
 
@@ -945,6 +948,8 @@
             </div>
         </div>
     </footer>
+    <!-- aos library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- jQuery (requerido por Slick) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
